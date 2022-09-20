@@ -4,6 +4,8 @@ import sys
 
 import slack_sdk
 
+import secrets as s
+
 URL = 'https://inspirobot.me/api?generate=true'
 TOKEN = 'SLACK_TOKEN'
 CHANNEL_ID = 'CHANNEL_ID'
@@ -30,7 +32,7 @@ with open('log.txt', 'w') as log:
         check_response(response, log)
 
     log.write('Initializing Slack API client\n')
-    client = slack_sdk.WebClient(token=TOKEN)
+    client = slack_sdk.WebClient(token=s.TOKEN)
     img_url = response.text
     attachments = [
         {
@@ -41,7 +43,7 @@ with open('log.txt', 'w') as log:
     log.write('Sending payload to Slack channel\n')
     try:
         response = client.chat_postMessage(
-            channel = CHANNEL_ID,
+            channel = s.CHANNEL_ID,
             attachments = attachments
         )
     except SlackApiError as e:
