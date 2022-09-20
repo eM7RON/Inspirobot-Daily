@@ -6,9 +6,9 @@ This script will allow Inspirobot to post in a Slack channel of your choice at a
 
 ### Requirements
 
-python 3
-requests
-slack_sdk
+python 3  
+requests  
+slack_sdk  
 
 ### Preparation
 
