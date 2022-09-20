@@ -12,7 +12,7 @@ slack_sdk
 
 ### Preparation
 
-You will need to:
+You will need to:  
 create a Slack App in your workspace  
 create a Slack API token  
 get the unique id of the channel in which you would like Inspirobot to post  
